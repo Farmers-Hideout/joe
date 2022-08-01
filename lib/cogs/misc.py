@@ -15,11 +15,11 @@ class misc(commands.Cog):
 
     @slash_command()
     async def help(self, ctx):
-        ctx.respond("I ain't helping you for a damn thing")
+        await ctx.respond("I ain't helping you for a damn thing")
 
     @slash_command()
     async def changelog(self, ctx):
-        response = ctx.respond("Give me a second")
+        response = await ctx.respond("Give me a second")
         asyncio.sleep(2)
         response = await ctx.interaction.original_message()
         await response.edit("Seems like I'm too lazy")
@@ -40,7 +40,7 @@ class misc(commands.Cog):
 
     @slash_command()
     async def invite(self, ctx):
-        ctx.respond("https://discord.gg/64f9MtV8Ws")
+        await ctx.respond("https://discord.gg/64f9MtV8Ws")
 
 def setup(bot):
     bot.add_cog(misc(bot))
