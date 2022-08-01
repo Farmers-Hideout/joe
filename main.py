@@ -63,4 +63,4 @@ if __name__ == "__main__":
     db_loop = asyncio.get_event_loop()
     db_loop.run_until_complete(create_db_pool())
     asyncio.run(main())
-    bot.run("TOKEN")
+    bot.run(TOKEN)
